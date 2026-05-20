@@ -3,6 +3,8 @@
 *.iml
 .idea/
 *.log
+.DS_Store
+*.md
 
 # Ignora dependencias locales
 target/
