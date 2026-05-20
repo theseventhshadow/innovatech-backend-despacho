@@ -21,13 +21,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-ventas:latest .
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-ventas:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-despacho:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-despacho:${{ github.sha }} .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/backend-ventas:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/backend-ventas:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/backend-despacho:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/backend-despacho:${{ github.sha }}
 
       - name: Deploy to EC2 Backend (via EC2 Frontend)
         uses: appleboy/ssh-action@v1.0.3
