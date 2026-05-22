@@ -20,6 +20,6 @@ COPY --from=builder /app/target/*.jar app.jar
 # Cambiar a usuario no root
 USER spring:spring
 
-EXPOSE 8080
+EXPOSE 8081
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
